@@ -4,6 +4,12 @@
 # A template with functional examples for creating BaSH menus.
 # Save (or copy and paste) this script as your starting point for your file.
 
+# ================ Process ===================
+# 1.	Add desired code in modules.
+# 2.	Add an option for the user to select in show_menus.
+# 3.    Link option to module via read_options.
+# 4.    Save the modified file under a new name.
+
 
 # ============ Environment Variables ============= 
 
@@ -12,7 +18,7 @@ STD='\033[0;0;39m'
 RED='\033[0;41;30m'
 
 # =================== Modules =====================
-# Add your desired programme modules
+# 1.	Add your desired programme/code modules
 
 PrintUsername(){
 # Change text colour and prints the current user variable.
@@ -37,6 +43,7 @@ MainMenu(){
 	Description=" An empty template for new menus "
 
 # Display the menu options
+# 2.	Add an option for the user to select in show_menus.
 show_menus(){
 	echo " "	
 	echo " $MenuTitle "
@@ -60,10 +67,11 @@ show_menus(){
 }
 
 read_options(){
-# Maps the displayed options to command modules	
+# Maps the displayed options to command modules
+# 3.    Link option to module via read_options.
 	local choice
 # Inform user how to proceed and capture input.	
-	read -p "Enter the desired item number or command: " choice
+	read -p "Enter the desired item number or command: " choice	
 # Execute selected command modules	
 	case $choice in
         0)   PrintUsername ;;
