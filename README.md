@@ -11,17 +11,4 @@ Save (or copy and paste) this script as a starting point for your file.
 3. Add option to module via read_options.  
 4. Save the modified file under a new name.  
 
-
-============ Modules =============  
-Below are a couple of examples of the desired layout for modules:  
-
-PrintUsername(){
-	echo -e "${RED} Current user is: ${STD}" $USER
-}
-
-DateTime(){
-	DT=$(date)
-	echo -e "${RED} Today is: ${STD}" $DT
-}
-
 More details can be found within the script.  
