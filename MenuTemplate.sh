@@ -67,24 +67,25 @@ read_options(){
 # Execute selected command modules	
 	case $choice in
         0)   PrintUsername ;;
-		1)   DateTime ;;
-		2)   PrintUsername && DateTime ;;
-		3)   ;;
-		4)   ;;
-		5)   ;;
-		6)   ;;
-		7)   ;;
-		8)   ;;
+	1)   DateTime ;;
+	2)   PrintUsername && DateTime ;;
+	3)   ;;
+	4)   ;;
+	5)   ;;
+	6)   ;;
+	7)   ;;
+	8)   ;;
         9)   ;;
         10)  ;;
 # Quit this menu
         99) clear && echo " See you later $USER! " && exit 0;;
 # Capture non listed inputs and send to BASH.
-		*) echo -e "${RED} $choice is not a displayed option, trying BaSH.....${STD}" && echo -e "$choice" | /bin/bash
+	*) echo -e "${RED} $choice is not a displayed option, trying BaSH.....${STD}" && echo -e "$choice" | /bin/bash
 	esac
 }
 
 # --------------- Main loop --------------------------
+# Continues to iterate through this menu loop. 
 while true
 do
 	show_menus
@@ -94,6 +95,6 @@ done
 }
 
 # =================== Run Commands ===============
-# commands to run in this file at start.
+# commands to run in this file at start (or nothing will happen).
 MainMenu
 
